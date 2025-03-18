@@ -6,6 +6,7 @@ namespace WebApplication1.Domains
 {
         [Table("Instituto")]
         [Index(nameof(CNPJ), IsUnique = true)]
+    
     public class Instituicao
     {
 

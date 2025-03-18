@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.EntityFrameworkCore;
+using Projeto_EventPlus.Domains;
 using WebApplication1.Domains;
 
 namespace Event.Context

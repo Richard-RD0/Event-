@@ -1,29 +1,30 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication1.Domains
+namespace Projeto_EventPlus.Domains
 {
+    [Table("Eventos")]
     public class Eventos
     {
         [Key]
         public Guid IdEvento { get; set; }
 
-        [Column(TypeName = "VARCHAR(50)")]
-        [Required(ErrorMessage = "O nome do evento é obrigatório")]
-        [StringLength(50)]
-        public string? NomeEvento { get; set; }
+       [ForeignKey("TipoEvento")]
+        public Guid IdTipoEvento { get; set; }
 
-        [Column(TypeName = "DATETIME(8)")]
-        [Required(ErrorMessage = "A data do evento é obrigatório")]
-        [StringLength(8)]
-        public string? DataEvento { get; set; }
+        [ForeignKey("Instituicao")]
+        public Guid IdInstituicao { get; set; }
 
-        [Column(TypeName = "DATETIME(60)")]
-        [Required(ErrorMessage = "A hora do evento é obrigatório")]
-        [StringLength(60)]
+        [Column(TypeName = "DATE")]
+        [Required(ErrorMessage = "A data do evento e obrigatoria!")]
+        public DateTime DataEvento { get; set; }
 
-        public string? HoraEvento { get; set; }
+        [Column(TypeName = "VARCHAR(100)")]
+        [Required(ErrorMessage = "O nome do evento e obrigatorio")]
+        public String? NomeEvento { get; set; }
 
-     
+        [Column(TypeName = "TEXT")]
+        [Required(ErrorMessage = "A descricao do evento e obrigatoria!")]
+        public String? Descricao { get; set; }
     }
 }

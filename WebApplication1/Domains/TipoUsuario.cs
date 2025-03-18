@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Domains
 {
+
+    [Table("TipoUsuario")]
     public class TipoUsuario
     {
        

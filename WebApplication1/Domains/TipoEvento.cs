@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Domains
 {
+    [Table("TipoEvento")]
     public class TipoEvento
     {   
             [Key]

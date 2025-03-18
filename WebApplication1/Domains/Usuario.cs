@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Domains
 {
+    [Table("Usuario")]
     public class Usuario;
     
         namespace Event.Domains

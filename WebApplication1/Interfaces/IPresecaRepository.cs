@@ -1,4 +1,5 @@
-﻿using WebApplication1.Domains;
+﻿using Projeto_EventPlus.Domains;
+using WebApplication1.Domains;
 
 namespace Event.Interfaces
 {

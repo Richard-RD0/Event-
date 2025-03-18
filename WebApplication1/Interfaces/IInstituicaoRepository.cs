@@ -2,6 +2,6 @@
 {
     public interface IInstituicaoRepository
     {
-        void cadastrar()
+        void cadastrar();
     }
 }
